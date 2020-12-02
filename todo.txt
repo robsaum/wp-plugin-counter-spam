@@ -1,0 +1,32 @@
+Notes: Spam Countermeasures inspired by http://bit.ly/kvHKAX, http://bit.ly/mTDAcB and http://bit.ly/ly9yG9
+1)  [Done]	Rename 'wp-comments-post.php' file to something else (e.g. wp-comments-post-bak.php)
+2)  [Done]	Replace 'wp-comments-post.php' with a bot IP logger
+3) 	[Done]	Obfuscate comment post action via JavaScript to point to '/wp-comments-post-bak.php' (http://wp-counter-spam.googlecode.com/svn/commentfilter.j)
+4)	[Done]  Add event handler to the form
+5) 	[Done]	Properly load script in WP header
+6)	[Done]	Disable existing comment form via add_filter hook and hide remaining fields via CSS
+7) 	[Done]	Add a hidden field to test for human
+8)	[Done]	Alert visitors that JavaScript must be enabled to post comments
+9)	[Done]	Display bot visit count on the Admin page
+10)	[Done]	Create the MySQL table for the ip logger
+
+
+11)	[TBD]	Rename 'wp-trackback.php'
+12)	[TBD]	Update references to 'wp-trackback.php' in the 'comment-functions.php', 'wp-include/template-loader.php', and 'wp-includes/comment-template.php'
+13) [TBD]	Display a list of bot IP addresses and offer the option to block them
+14) [TBD]	Setup a post star rating
+16) [TBD]	Run a MySQL query to close comments and pingbacks { Update wp_posts set `ping_status` = 'closed'; Update wp_posts set `comment_status` = 'closed'; }
+17) [TBD]	Update 'functions.php' with: function check_referrer() { if (!isset($_SERVER['HTTP_REFERER']) || $_SERVER['HTTP_REFERER'] == рс) { wp_die( __('Please enable referrers in your browser, or, if you\'re a spammer, get lost!') ); } } add_action('check_comment_flood', 'check_referrer');
+17) [TBD] 	is_logged_in() then hide the name field.
+18)	[TBD]	SQL to delete comment spam: "delete from wp_comments where comment_approved='spam';"
+19)	[TBD]	Option to purge logs
+20) [TBD]	Create an installer file
+21) [TBD]	Create an uninstaller file
+22)	[TBD]	Filter for Search Enging Bots, don't block them
+23) [TBD]	Turn off error reporting
+
+Resources:
+http://codex.wordpress.org/Function_Reference/comment_form
+http://www.1stwebdesigner.com/wordpress/comment-form-customization/
+http://codex.wordpress.org/Creating_Tables_with_Plugins
+

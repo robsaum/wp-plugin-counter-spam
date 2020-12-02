@@ -1,0 +1,10 @@
+.umbert { display: none; font-size: 0px; }
+textarea#comment { display: none !important; font-size: 0px; }
+p.form-submit #submit { display: none !important; font-size: 0px; }
+p.form-allowed-tags { display: none !important; font-size: 0px; }
+p.comment-form-comment { display: none !important; font-size: 0px; }
+#reply-title { display: none !important; font-size: 0px; }
+p.comment-notes { display: none !important; font-size: 0px; }
+p.comment-form-author { display: none !important; font-size: 0px; }
+p.comment-form-email { display: none !important; font-size: 0px; }
+p.comment-form-url { display: none !important; font-size: 0px; }
